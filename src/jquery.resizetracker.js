@@ -6,10 +6,8 @@
     $(settings.bound).on(settings.events, function() {
       var contentWidth = $(content).width(),
         heightElement = settings.trackViewportHeight ? settings.viewport : content,
-        contentHeight = $(heightElement).height(),
-        first = settings.widthByHeight ? contentWidth : contentHeight,
-        second = settings.widthByHeight ? contentHeight : contentWidth;
-      $(self).text(first + 'px x ' + second + 'px');
+        contentHeight = $(heightElement).height();
+      $(self).html(settings.format(contentWidth, contentHeight));
     });
     return self;
   };
@@ -19,6 +17,8 @@
     trackViewportHeight: true,
     viewport: window,
     events: 'load resize',
-    widthByHeight: true
+    format: function(width, height) {
+      return width + 'px x ' + height + 'px';
+    }
   };
 })(jQuery, window);
