@@ -5,11 +5,11 @@
 
     $(settings.bound).on(settings.events, function() {
       var contentWidth = $(content).width(),
-        heightElement = trackViewportHeight ? settings.viewport : content,
+        heightElement = settings.trackViewportHeight ? settings.viewport : content,
         contentHeight = $(heightElement).height(),
         first = settings.widthByHeight ? contentWidth : contentHeight,
         second = settings.widthByHeight ? contentHeight : contentWidth;
-      $(self).text(first + 'px x' + second + 'px');
+      $(self).text(first + 'px x ' + second + 'px');
     });
     return self;
   };
