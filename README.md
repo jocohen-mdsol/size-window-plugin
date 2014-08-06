@@ -20,7 +20,7 @@ where `size-display` is an element that will display the size of the `trackedEle
 ###Stylesheet
 An optional stylesheet is included (`src/jquery.resizetracker.css`) that fixes a size display container in the top-right corner. See below (or `tests/basic.html`) for usage. 
 ```html
-&lt;div class="size-container"&gt;
-  Size: &lt;span class="size-display"&gt;&lt;/span&gt;
-&lt;/div&gt;
+<div class="size-container">
+  Size: <span class="size-display"></span>
+</div>
 ```
