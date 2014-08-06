@@ -3,16 +3,19 @@
   <head>
     <meta charset="utf-8">
     <title>jQuery resize tracker test</title>
+    <link rel="stylesheet" href="../src/jquery.resizetracker.css">
   </head>
 
   <body>
     <div class="resize-container" style="width: 95%; outline: 1px solid #000; text-align: center">Testing</div>
-    <div class="resize-tracker"></div>
+    <div class="size-container">
+      Size: <span class="size-display"></span>
+    </div>
 
     <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
     <script src="../src/jquery.resizetracker.js"></script>
     <script>
-      $('.resize-tracker').resizeTracker('.resize-container');
+      $('.size-display').resizeTracker('.resize-container');
     </script>
   </body>
 </html>
